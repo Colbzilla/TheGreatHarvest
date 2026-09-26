@@ -14,3 +14,9 @@ config/name="The Great Harvest"
 run/main_scene="res://map.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=216
+window/stretch/mode="viewport"
