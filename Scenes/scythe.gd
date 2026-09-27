@@ -10,7 +10,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	## Sets scythe to player position
 	player_pos = get_parent().get_node("PlayerCharacter").position
 	position = player_pos
+	
+	## Updates angle to mouse, then sets scythe angle
 	direction = global_position.direction_to(get_global_mouse_position())
 	rotation = direction.angle()

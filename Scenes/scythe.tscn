@@ -108,7 +108,10 @@ script = ExtResource("1_jvho5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_goemj")
-animation = &"attackOne"
+animation = &"attackTwo"
+frame = 5
+frame_progress = 1.0
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mmm65")
