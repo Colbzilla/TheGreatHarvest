@@ -7,11 +7,12 @@
 [node name="Map" type="Node"]
 
 [node name="Scythe" parent="." instance=ExtResource("1_5qsmp")]
-z_index = 1
+z_index = 2
 position = Vector2(127, 96)
 collision_layer = 2
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_hqvn1")]
+z_index = 1
 position = Vector2(121, 102)
 
 [node name="MapBase" type="Sprite2D" parent="."]

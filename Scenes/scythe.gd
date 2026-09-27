@@ -13,8 +13,10 @@ func _physics_process(_delta: float) -> void:
 	direction = get_parent().get_node("PlayerCharacter").position.direction_to(get_global_mouse_position())
 	rotation = direction.angle()
 	
+	player_pos = get_parent().get_node("PlayerCharacter").position
+	
 	## Sets scythe to player position
-	position = get_parent().get_node("PlayerCharacter").position
+	position = player_pos 
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,6 +24,7 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_pressed("attack") || animated_sprite.is_playing():
 		## Moves scythe toward mouse
+		visible = true
 		position.x += 24 * cos((direction).angle())
 		position.y += 24 * sin((direction).angle())
 		
@@ -36,3 +39,5 @@ func _process(delta: float) -> void:
 			else:
 				animated_sprite.play("attackTwo")
 				attack_animation = 1
+	else:
+		visible = false
