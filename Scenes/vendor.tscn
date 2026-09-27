@@ -2,27 +2,26 @@
 
 [ext_resource type="Script" uid="uid://chslwvamvc4y8" path="res://Scripts/vendor.gd" id="1_mer7g"]
 [ext_resource type="PackedScene" uid="uid://t1afduxrcwd2" path="res://Scenes/vendorUI.tscn" id="2_ohb2d"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0o7l0"]
-size = Vector2(32, 64)
+[ext_resource type="Texture2D" uid="uid://csafpqbf3cvx7" path="res://Sprites/Shopkeeper.png" id="3_nh7am"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khmv4"]
-size = Vector2(24, 64)
+size = Vector2(64.5, 32)
 
 [node name="Vendor" type="Node2D" unique_id=334635494]
 script = ExtResource("1_mer7g")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=976660432]
-texture = SubResource("PlaceholderTexture2D_0o7l0")
-
 [node name="DetectArea" type="Area2D" parent="." unique_id=1571645813]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=823508524]
-position = Vector2(28, 0)
+position = Vector2(32.75, 20)
 shape = SubResource("RectangleShape2D_khmv4")
 
 [node name="UI" parent="." unique_id=1479977888 instance=ExtResource("2_ohb2d")]
 visible = false
+
+[node name="Shopkeeper" type="Sprite2D" parent="." unique_id=1015115299]
+position = Vector2(32, 16)
+texture = ExtResource("3_nh7am")
 
 [connection signal="area_entered" from="DetectArea" to="." method="_on_detect_area_area_entered"]
 [connection signal="area_exited" from="DetectArea" to="." method="_on_detect_area_area_exited"]

@@ -1,20 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4babi1uysjld"]
+[gd_scene format=3 uid="uid://c4babi1uysjld"]
 
 [ext_resource type="PackedScene" uid="uid://db7ighi66go7w" path="res://Scenes/scythe.tscn" id="1_5qsmp"]
 [ext_resource type="PackedScene" uid="uid://dmejsito8m6q1" path="res://Scenes/player_character.tscn" id="1_hqvn1"]
 [ext_resource type="Texture2D" uid="uid://b3mu581fmalt3" path="res://Sprites/Terrain.webp" id="2_huoew"]
+[ext_resource type="PackedScene" uid="uid://cc5e706fi22vy" path="res://Scenes/vendor.tscn" id="4_myvm1"]
+[ext_resource type="Script" uid="uid://c8dvkefnodafc" path="res://Scenes/values.gd" id="5_q0mm3"]
 
-[node name="Map" type="Node"]
+[node name="Map" type="Node" unique_id=313044375]
 
-[node name="Scythe" parent="." instance=ExtResource("1_5qsmp")]
+[node name="Scythe" parent="." unique_id=1595600 instance=ExtResource("1_5qsmp")]
 z_index = 1
 position = Vector2(127, 96)
 collision_layer = 2
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("1_hqvn1")]
+[node name="PlayerCharacter" parent="." unique_id=437493402 instance=ExtResource("1_hqvn1")]
 position = Vector2(121, 102)
 
-[node name="MapBase" type="Sprite2D" parent="."]
+[node name="MapBase" type="Sprite2D" parent="." unique_id=1447299477]
 z_index = -1
 position = Vector2(120, 108)
 texture = ExtResource("2_huoew")
+
+[node name="Vendor" parent="." unique_id=334635494 instance=ExtResource("4_myvm1")]
+
+[node name="Values" type="Node" parent="." unique_id=845075711]
+script = ExtResource("5_q0mm3")
+
+[node name="Crops" type="Node" parent="Values" unique_id=410284050]
+
+[node name="Seeds" type="Node" parent="Values" unique_id=1891980244]
