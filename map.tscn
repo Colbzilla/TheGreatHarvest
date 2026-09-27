@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://b36by7nji12wg"]
+[gd_scene load_steps=3 format=3 uid="uid://b36by7nji12wg"]
 
 [ext_resource type="PackedScene" uid="uid://dmejsito8m6q1" path="res://player_character.tscn" id="1_hqvn1"]
+[ext_resource type="PackedScene" uid="uid://upik4ly1rjpm" path="res://enemy_pumpkin.tscn" id="2_o35bh"]
 
 [node name="Map" type="Node"]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_hqvn1")]
 position = Vector2(136, 106)
+
+[node name="EnemyPumpkin" parent="." instance=ExtResource("2_o35bh")]
+position = Vector2(5, 98)
