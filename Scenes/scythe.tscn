@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://db7ighi66go7w"]
+[gd_scene format=3 uid="uid://db7ighi66go7w"]
 
 [ext_resource type="Texture2D" uid="uid://bqhvoy5eqsl6a" path="res://Sprites/ScytheAttackSpriteSheet.png" id="1_g8gv5"]
-[ext_resource type="Script" path="res://Scenes/scythe.gd" id="1_jvho5"]
+[ext_resource type="Script" uid="uid://duc6ffaphf0nw" path="res://Scripts/scythe.gd" id="1_jvho5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tg8in"]
 atlas = ExtResource("1_g8gv5")
@@ -72,7 +72,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k8rg3")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attackOne",
 "speed": 12.0
 }, {
@@ -95,7 +95,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hlrqx")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attackTwo",
 "speed": 12.0
 }]
@@ -103,15 +103,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmm65"]
 radius = 17.0
 
-[node name="Scythe" type="CharacterBody2D"]
+[node name="Scythe" type="CharacterBody2D" unique_id=482828859]
 script = ExtResource("1_jvho5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1089330012]
 sprite_frames = SubResource("SpriteFrames_goemj")
 animation = &"attackOne"
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1088952789]
 position = Vector2(-0.5, -2.5)
 shape = SubResource("CircleShape2D_mmm65")
 disabled = true

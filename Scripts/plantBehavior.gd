@@ -28,7 +28,8 @@ var states = {#Index, SpriteAnim, Health, canHit, Lower mature time, <higher
 	"Dead" = [5,"",0,false,2000,2000]
 }
 var state = states.values()[0]
-var health = 1
+@export var health = 1
+var canGrow = false
 
 func isAttacked(damage):
 	health -= damage
@@ -40,6 +41,7 @@ func attack(damage):#non-functional as of rn, placeholder values
 	debounce = false
 	#Make target recieve damage
 	attackTimer.start()
+	
 func pursue(delta):
 	var direction = global_position.direction_to(target.global_position)
 	global_position += direction * moveSpeed * delta
@@ -49,7 +51,7 @@ func calcMatureTime():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	matureTimer.start(calcMatureTime())
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
