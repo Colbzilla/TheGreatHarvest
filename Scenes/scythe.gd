@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var player_pos = get_parent().get_node("PlayerCharacter").position
 var direction := global_position.direction_to(get_global_mouse_position())
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var collision_shape = $CollisionShape2D
 var attack_animation = 1
 
 
@@ -20,8 +21,13 @@ func _physics_process(_delta: float) -> void:
 func _process(delta: float) -> void:
 	
 	if Input.is_action_pressed("attack") || animated_sprite.is_playing():
+		## Moves scythe toward mouse
 		position.x += 24 * cos((direction).angle())
 		position.y += 24 * sin((direction).angle())
+		
+		## Activates Collision Shape
+		collision_shape.disabled = !(animated_sprite.frame == 2)
+		
 		
 		if !animated_sprite.is_playing():
 			if attack_animation == 1:
