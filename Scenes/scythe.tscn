@@ -27,6 +27,10 @@ region = Rect2(204, 0, 51, 45)
 atlas = ExtResource("1_g8gv5")
 region = Rect2(255, 0, 51, 45)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh1v6"]
+atlas = ExtResource("1_g8gv5")
+region = Rect2(357, 0, 51, 45)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_k3p1u"]
 atlas = ExtResource("1_g8gv5")
 region = Rect2(255, 0, 51, 45)
@@ -34,10 +38,6 @@ region = Rect2(255, 0, 51, 45)
 [sub_resource type="AtlasTexture" id="AtlasTexture_45ll7"]
 atlas = ExtResource("1_g8gv5")
 region = Rect2(306, 0, 51, 45)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bh1v6"]
-atlas = ExtResource("1_g8gv5")
-region = Rect2(357, 0, 51, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gbvnw"]
 atlas = ExtResource("1_g8gv5")
@@ -78,13 +78,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_bh1v6")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_k3p1u")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_45ll7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bh1v6")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gbvnw")
@@ -109,7 +109,7 @@ script = ExtResource("1_jvho5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_goemj")
 animation = &"attackTwo"
-frame = 5
+frame = 4
 frame_progress = 1.0
 flip_h = true
 
