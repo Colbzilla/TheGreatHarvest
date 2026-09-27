@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4babi1uysjld"]
+
+[ext_resource type="PackedScene" uid="uid://db7ighi66go7w" path="res://Scenes/scythe.tscn" id="1_5qsmp"]
+[ext_resource type="PackedScene" uid="uid://dmejsito8m6q1" path="res://Scenes/player_character.tscn" id="1_hqvn1"]
+[ext_resource type="Texture2D" uid="uid://b3mu581fmalt3" path="res://Sprites/Terrain.webp" id="2_huoew"]
+
+[node name="Map" type="Node"]
+
+[node name="Scythe" parent="." instance=ExtResource("1_5qsmp")]
+z_index = 1
+position = Vector2(127, 96)
+collision_layer = 2
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_hqvn1")]
+position = Vector2(121, 102)
+
+[node name="MapBase" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(120, 108)
+texture = ExtResource("2_huoew")
