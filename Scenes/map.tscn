@@ -8,6 +8,7 @@
 
 [node name="Scythe" parent="." instance=ExtResource("1_5qsmp")]
 position = Vector2(127, 96)
+collision_layer = 2
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_hqvn1")]
 z_index = 1

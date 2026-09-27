@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://db7ighi66go7w"]
+[gd_scene load_steps=17 format=3 uid="uid://db7ighi66go7w"]
 
 [ext_resource type="Texture2D" uid="uid://dykjptkn2yeel" path="res://Sprites/ScytheAttackSpriteSheet.png" id="1_g8gv5"]
+[ext_resource type="Script" path="res://Scenes/scythe.gd" id="1_jvho5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fphtn"]
 atlas = ExtResource("1_g8gv5")
@@ -103,6 +104,7 @@ animations = [{
 radius = 17.0
 
 [node name="Scythe" type="CharacterBody2D"]
+script = ExtResource("1_jvho5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_goemj")
