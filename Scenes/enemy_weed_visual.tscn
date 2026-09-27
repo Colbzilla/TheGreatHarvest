@@ -289,36 +289,38 @@ _data = {
 position = Vector2(-0.374577, 0.0936432)
 
 [node name="PumpkinWeedStem" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(0.117806, -6.43685)
+position = Vector2(0.305096, -13.5361)
 texture = ExtResource("1_sa2rd")
 
 [node name="PumpkinWeedFootL" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(0.860552, 1.14815)
+position = Vector2(1.04784, -5.95114)
 texture = ExtResource("2_02amh")
 offset = Vector2(2.5088, 1.95008)
 
 [node name="PumpkinWeedFootR" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(-0.529995, 1.28059)
+position = Vector2(-0.342705, -5.8187)
 texture = ExtResource("3_b5x24")
 offset = Vector2(-2.4837, 2.0062)
 
 [node name="PumpkinWeedLeafHighL" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(0.201611, -5.59315)
+position = Vector2(0.388901, -12.6924)
 texture = ExtResource("4_6o2dw")
 offset = Vector2(4.04687, -1.39148)
 
 [node name="PumpkinWeedLeafHighR" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(-0.466564, -5.1477)
+position = Vector2(-0.279274, -12.247)
 texture = ExtResource("5_wxvo3")
 offset = Vector2(-4.01579, -1.53117)
 
 [node name="PumpkinWeedLeafLowL" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(0.280356, -0.710956)
+position = Vector2(0.467646, -7.81025)
+rotation = -0.140263
+scale = Vector2(1, 1)
 texture = ExtResource("6_q8h06")
 offset = Vector2(3.10733, -1.54306)
 
 [node name="PumpkinWeedLeafLowR" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(0.280356, -0.710956)
+position = Vector2(0.467646, -7.81025)
 texture = ExtResource("7_tkryc")
 offset = Vector2(-3.39663, -0.992931)
 
@@ -396,6 +398,7 @@ remote_path = NodePath("../../../../../../../Body/PumpkinWeedLeafLowR")
 
 [node name="L" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves"]
 rotation = -0.140263
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 auto_calculate_length_and_angle = false
 length = 5.946
