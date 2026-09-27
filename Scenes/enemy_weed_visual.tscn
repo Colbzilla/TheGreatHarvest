@@ -1,0 +1,412 @@
+[gd_scene load_steps=12 format=3 uid="uid://jxr5kmykjql0"]
+
+[ext_resource type="Texture2D" uid="uid://b7f0l3bqqgtsi" path="res://Sprites/Enemies/weed/PumpkinWeedStem.png" id="1_sa2rd"]
+[ext_resource type="Texture2D" uid="uid://dhm0qsqemffnt" path="res://Sprites/Enemies/weed/PumpkinWeedFootL.png" id="2_02amh"]
+[ext_resource type="Texture2D" uid="uid://de8fxmon2nx4s" path="res://Sprites/Enemies/weed/PumpkinWeedFootR.png" id="3_b5x24"]
+[ext_resource type="Texture2D" uid="uid://cftjitasuyftm" path="res://Sprites/Enemies/weed/PumpkinWeedLeafHighL.png" id="4_6o2dw"]
+[ext_resource type="Texture2D" uid="uid://1hf7xjymrekk" path="res://Sprites/Enemies/weed/PumpkinWeedLeafHighR.png" id="5_wxvo3"]
+[ext_resource type="Texture2D" uid="uid://dhfbdyohl6c78" path="res://Sprites/Enemies/weed/PumpkinWeedLeafLowL.png" id="6_q8h06"]
+[ext_resource type="Texture2D" uid="uid://7tcshxlr34cc" path="res://Sprites/Enemies/weed/PumpkinWeedLeafLowR.png" id="7_tkryc"]
+
+[sub_resource type="Animation" id="Animation_vdud4"]
+resource_name = "Idle"
+loop_mode = 1
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves/R:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2.63902, 0.217638),
+"update": 0,
+"values": [0.177908, -0.326909]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves/L:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2.63902, 0.217638),
+"update": 0,
+"values": [-0.201824, 0.269953]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves/R:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2.63902, 0.217638),
+"update": 0,
+"values": [0.219251, -0.284614]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/FootR:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2.63902, 0.217638),
+"update": 0,
+"values": [0.0, -0.415504]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/FootL:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2.63902, 0.217638),
+"update": 0,
+"values": [0.0, 0.457451]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2.63902, 0.217638),
+"update": 0,
+"values": [Vector2(0.0773163, 2.00897), Vector2(0.0773163, 0.00896549)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves/L:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2.63902, 0.217638),
+"update": 0,
+"values": [-0.140263, 0.52289]
+}
+
+[sub_resource type="Animation" id="Animation_vhiu2"]
+resource_name = "Move"
+length = 0.5
+loop_mode = 1
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves/R:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(2.63902, 4),
+"update": 0,
+"values": [0.177908, -0.723741]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves/L:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(2.63902, 4),
+"update": 0,
+"values": [-0.201824, 0.778446]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves/R:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(2.63902, 4),
+"update": 0,
+"values": [0.219251, -0.71663]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/FootR:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(2.63902, 4),
+"update": 0,
+"values": [0.0, -0.415504]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/FootL:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(2.63902, 4),
+"update": 0,
+"values": [0.0, 0.457451]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(2.63902, 4),
+"update": 0,
+"values": [Vector2(0.0773163, 2.00897), Vector2(0.0773163, -4.99668)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves/L:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(2.63902, 4),
+"update": 0,
+"values": [-0.140263, 1.09057]
+}
+
+[sub_resource type="Animation" id="Animation_1fb0r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves/R:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves/L:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves/R:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves/L:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.140263]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterContainer/Bone/Skeleton2D/Base:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0773163, -4.99668)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ndgwv"]
+_data = {
+"Idle": SubResource("Animation_vdud4"),
+"Move": SubResource("Animation_vhiu2"),
+"RESET": SubResource("Animation_1fb0r")
+}
+
+[node name="Animation" type="Node2D"]
+
+[node name="CharacterContainer" type="Node2D" parent="."]
+
+[node name="Body" type="Node2D" parent="CharacterContainer"]
+position = Vector2(-0.374577, 0.0936432)
+
+[node name="PumpkinWeedStem" type="Sprite2D" parent="CharacterContainer/Body"]
+position = Vector2(0.117806, -6.43685)
+texture = ExtResource("1_sa2rd")
+
+[node name="PumpkinWeedFootL" type="Sprite2D" parent="CharacterContainer/Body"]
+position = Vector2(0.860552, 1.14815)
+texture = ExtResource("2_02amh")
+offset = Vector2(2.5088, 1.95008)
+
+[node name="PumpkinWeedFootR" type="Sprite2D" parent="CharacterContainer/Body"]
+position = Vector2(-0.529995, 1.28059)
+texture = ExtResource("3_b5x24")
+offset = Vector2(-2.4837, 2.0062)
+
+[node name="PumpkinWeedLeafHighL" type="Sprite2D" parent="CharacterContainer/Body"]
+position = Vector2(0.201611, -5.59315)
+texture = ExtResource("4_6o2dw")
+offset = Vector2(4.04687, -1.39148)
+
+[node name="PumpkinWeedLeafHighR" type="Sprite2D" parent="CharacterContainer/Body"]
+position = Vector2(-0.466564, -5.1477)
+texture = ExtResource("5_wxvo3")
+offset = Vector2(-4.01579, -1.53117)
+
+[node name="PumpkinWeedLeafLowL" type="Sprite2D" parent="CharacterContainer/Body"]
+position = Vector2(0.280356, -0.710956)
+texture = ExtResource("6_q8h06")
+offset = Vector2(3.10733, -1.54306)
+
+[node name="PumpkinWeedLeafLowR" type="Sprite2D" parent="CharacterContainer/Body"]
+position = Vector2(0.280356, -0.710956)
+texture = ExtResource("7_tkryc")
+offset = Vector2(-3.39663, -0.992931)
+
+[node name="Bone" type="Node2D" parent="CharacterContainer"]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="CharacterContainer/Bone"]
+
+[node name="Base" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D"]
+position = Vector2(0.0773163, -4.99668)
+rest = Transform2D(1, 0, 0, 1, -0.109974, 2.10261)
+
+[node name="FootR" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 5.921
+bone_angle = -206.154
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterContainer/Bone/Skeleton2D/Base/FootR"]
+position = Vector2(-0.794598, -0.72838)
+remote_path = NodePath("../../../../../Body/PumpkinWeedFootR")
+
+[node name="FootL" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 6.421
+bone_angle = 24.291
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterContainer/Bone/Skeleton2D/Base/FootL"]
+position = Vector2(0.595949, -0.860815)
+remote_path = NodePath("../../../../../Body/PumpkinWeedFootL")
+
+[node name="Stem" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base"]
+position = Vector2(0.18729, -0.0936432)
+rest = Transform2D(1, 0, 0, 1, 0.18729, -0.0936432)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem"]
+position = Vector2(-0.334087, -8.35217)
+remote_path = NodePath("../../../../../Body/PumpkinWeedStem")
+
+[node name="UpperLeaves" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem"]
+position = Vector2(-0.250282, -7.50847)
+rest = Transform2D(1, 0, 0, 1, -0.250282, -7.50847)
+
+[node name="R" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 9.071
+bone_angle = -175.384
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves/R"]
+position = Vector2(-0.668175, 0.44545)
+remote_path = NodePath("../../../../../../../Body/PumpkinWeedLeafHighR")
+
+[node name="L" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 9.071
+bone_angle = -12.427
+
+[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/UpperLeaves/L"]
+remote_path = NodePath("../../../../../../../Body/PumpkinWeedLeafHighL")
+
+[node name="LowerLeaves" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem"]
+position = Vector2(-0.171537, -2.62628)
+rest = Transform2D(1, 0, 0, 1, -0.171537, -2.62628)
+
+[node name="R" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 6.181
+bone_angle = -190.769
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves/R"]
+remote_path = NodePath("../../../../../../../Body/PumpkinWeedLeafLowR")
+
+[node name="L" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves"]
+rotation = -0.140263
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 5.946
+bone_angle = -12.427
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterContainer/Bone/Skeleton2D/Base/Stem/LowerLeaves/L"]
+remote_path = NodePath("../../../../../../../Body/PumpkinWeedLeafLowL")
+
+[node name="IKtargets" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ndgwv")
+}
