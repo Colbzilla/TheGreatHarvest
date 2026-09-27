@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://c4babi1uysjld"]
+[gd_scene load_steps=14 format=3 uid="uid://c4babi1uysjld"]
 
 [ext_resource type="PackedScene" uid="uid://db7ighi66go7w" path="res://Scenes/scythe.tscn" id="1_5qsmp"]
 [ext_resource type="PackedScene" uid="uid://dmejsito8m6q1" path="res://Scenes/player_character.tscn" id="1_hqvn1"]
-[ext_resource type="Script" uid="uid://bsdyi6jwdl04u" path="res://Scripts/game.gd" id="1_ip1tg"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_ip1tg"]
 [ext_resource type="Texture2D" uid="uid://b3mu581fmalt3" path="res://Sprites/Terrain.webp" id="2_huoew"]
 [ext_resource type="Texture2D" uid="uid://bd2my4h2lg8j6" path="res://Sprites/UI/HealthbarFull-sheet.png" id="5_7x248"]
 
@@ -58,29 +58,29 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_twmc8")
 }],
-"loop": 0,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="Map" type="Node" unique_id=1168052995]
+[node name="Map" type="Node"]
 script = ExtResource("1_ip1tg")
 
-[node name="Scythe" parent="." unique_id=338566096 instance=ExtResource("1_5qsmp")]
+[node name="Scythe" parent="." instance=ExtResource("1_5qsmp")]
 z_index = 2
 position = Vector2(127, 96)
 collision_layer = 2
 
-[node name="PlayerCharacter" parent="." unique_id=459186640 instance=ExtResource("1_hqvn1")]
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_hqvn1")]
 z_index = 1
 position = Vector2(121, 102)
 
-[node name="MapBase" type="Sprite2D" parent="." unique_id=1751566842]
+[node name="MapBase" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(120, 108)
 texture = ExtResource("2_huoew")
 
-[node name="HealthBar" type="AnimatedSprite2D" parent="." unique_id=1558831171]
+[node name="HealthBar" type="AnimatedSprite2D" parent="."]
 position = Vector2(26, 7)
 sprite_frames = SubResource("SpriteFrames_mhtwt")
 frame = 4

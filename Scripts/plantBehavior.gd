@@ -4,7 +4,9 @@ extends Node2D
 @onready var detectArea = $DetectionArea
 @onready var matureTimer = $MaturityTimer
 @onready var attackTimer = $AttackTimer
+
 var values
+@onready var hitBox = $Hitbox
 
 var isPursuing = false#Just controls animations
 var canAttack = false#Cant move if attacking, once attacking is false it may move
@@ -50,6 +52,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if state[0] == 4:#If crop is a monster, then move & attack
 		if isPursuing and !canAttack and target:#If we got a target, but we cant attack them yet, walk toward um
 			pursue(delta)

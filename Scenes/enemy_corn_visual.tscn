@@ -461,44 +461,44 @@ position = Vector2(-6.87124, -5.88424)
 [node name="Body" type="Node2D" parent="CharacterContainer"]
 
 [node name="CornEnemyFootR" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(-3.88003, 15.2422)
-rotation = 0.00977802
-scale = Vector2(0.999984, 0.999984)
+position = Vector2(-3.89286, 15.2541)
+rotation = 0.00682723
+scale = Vector2(0.999974, 0.999974)
 texture = ExtResource("1_nae0w")
 offset = Vector2(0.453825, 3.73159)
 
 [node name="CornEnemyFootL" type="Sprite2D" parent="CharacterContainer/Body"]
 position = Vector2(14.1324, 14.4912)
-rotation = 0.0489299
-scale = Vector2(0.999968, 0.999968)
+rotation = 0.0489124
+scale = Vector2(0.999962, 0.999962)
 texture = ExtResource("1_nae0w")
 offset = Vector2(0.491455, 4.18394)
 
 [node name="CornEnemyLegLowerR" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(2.8418, 7.65319)
-rotation = 0.622815
-scale = Vector2(1.00001, 1.00001)
+position = Vector2(2.80649, 7.64542)
+rotation = 0.619864
+scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("3_odpnk")
 offset = Vector2(-0.20499, 5.44933)
 
 [node name="CornEnemyLegLowerL" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(16.4531, 5.62841)
-rotation = -2.7968
-scale = Vector2(1, -1)
+position = Vector2(16.4529, 5.62842)
+rotation = -2.79682
+scale = Vector2(0.999994, -0.999994)
 texture = ExtResource("3_odpnk")
 offset = Vector2(-0.20499, 5.44933)
 
 [node name="CornEnemyLegUpperR" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(5.21548, -3.75852)
-rotation = 0.258149
-scale = Vector2(1.00001, 1.00001)
+position = Vector2(5.21548, -3.75851)
+rotation = 0.26125
+scale = Vector2(0.999988, 0.999988)
 texture = ExtResource("4_52ghl")
 offset = Vector2(0.375, 6.875)
 
 [node name="CornEnemyLegUpperL" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(6.67727, -3.46836)
-rotation = 2.28725
-scale = Vector2(1, -1)
+position = Vector2(6.67723, -3.46833)
+rotation = 2.28726
+scale = Vector2(0.999994, -0.999994)
 texture = ExtResource("4_52ghl")
 offset = Vector2(0.375, 6.875)
 
@@ -509,16 +509,16 @@ scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("5_wrw4v")
 
 [node name="CornEnemyLeafLegR" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(0.332457, 9.70183)
-rotation = -2.98189
-scale = Vector2(1.00001, -1.00001)
+position = Vector2(0.303221, 9.70144)
+rotation = -2.98484
+scale = Vector2(0.999998, -0.999998)
 texture = ExtResource("9_enooh")
 offset = Vector2(6.02665, -0.171154)
 
 [node name="CornEnemyLeafLegL" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(16.2236, 6.70844)
-rotation = 0.584538
-scale = Vector2(1, 1)
+position = Vector2(16.2234, 6.70845)
+rotation = 0.584521
+scale = Vector2(0.999994, 0.999994)
 texture = ExtResource("9_enooh")
 offset = Vector2(5.99969, -0.0463514)
 
