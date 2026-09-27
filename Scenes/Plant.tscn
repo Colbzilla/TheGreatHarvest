@@ -50,6 +50,6 @@ texture = SubResource("PlaceholderTexture2D_j05hm")
 [connection signal="area_entered" from="Hitbox" to="." method="_on_detection_area_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_detection_area_area_exited"]
 [connection signal="timeout" from="MaturityTimer" to="." method="_on_maturity_timer_timeout"]
-[connection signal="timeout" from="DeathTimer" to="." method="_on_maturity_timer_timeout"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_maturity_timer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
