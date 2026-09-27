@@ -4,7 +4,7 @@ extends Node2D
 @onready var detectArea = $DetectionArea
 @onready var matureTimer = $MaturityTimer
 @onready var attackTimer = $AttackTimer
-@onready var deathTimer = $DeathTimer
+var values
 
 var isPursuing = false#Just controls animations
 var canAttack = false#Cant move if attacking, once attacking is false it may move
@@ -15,31 +15,25 @@ var rng = RandomNumberGenerator.new()
 var target #Should be player!
 
 var moveSpeed = 15
-var attackSpeed = 1
-var damage = 10#Arbitrary lol
+var attackSpeed = 3
+var damage = 1#Arbitrary lol
 var defaultGrowth = 1
 
-var states = {#Index, SpriteAnim, Health, canHit, Lower mature time, <higher
-	"Seed" = [0,"",1,false,defaultGrowth,defaultGrowth],
-	"Sprout" = [1,"",1,false,defaultGrowth,defaultGrowth],
-	"Tall Sprout" = [2,"",1,false,defaultGrowth,defaultGrowth],
-	"Ripe" = [3,"",1,true,defaultGrowth,defaultGrowth],
-	"Monster" = [4,"",100,true,2000,2000],
-	"Dead" = [5,"",0,false,2000,2000]
+var states = {#Index, SpriteAnim, Health, canHit, Lower mature time, <higher, yield
+	"Seed" = [0,"res://Sprites/Growing_Corn/seed.png",1,false,defaultGrowth,defaultGrowth,0],
+	"Sprout" = [1,"res://Sprites/Growing_Corn/sprout.png",1,false,defaultGrowth,defaultGrowth,0],
+	"Tall Sprout" = [2,"res://Sprites/Growing_Corn/tall_sprout.png",1,false,defaultGrowth,defaultGrowth,0],
+	"Ripe" = [3,"res://Sprites/Growing_Corn/ripe.png",1,true,defaultGrowth,defaultGrowth,5],
+	"Monster" = [4,"res://Sprites/Growing_Corn/CornEnemyCob.png",100,true,2000,2000,10],
+	"Dead" = [5,"res://Sprites/Growing_Corn/CornEnemyCobDead.png",0,false,2000,2000,0]
 }
 var state = states.values()[0]
-@export var health = 1
+@export var health = state[2]
 var canGrow = false
-
-func isAttacked(damage):
-	health -= damage
-	if health <= 0:
-		state = states.values()[states.size()-1]#Turn to dead state
-		deathTimer.start()
 
 func attack(damage):#non-functional as of rn, placeholder values
 	debounce = false
-	#Make target recieve damage
+	values.player_health -= damage
 	attackTimer.start()
 	
 func pursue(delta):
@@ -51,8 +45,8 @@ func calcMatureTime():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
-
+	values = get_tree().root.get_node("Map")
+	matureTimer.start(calcMatureTime())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -62,6 +56,12 @@ func _process(delta: float) -> void:
 		elif canAttack and debounce:
 			#Attack player!
 			attack(damage)
+	
+	#Check Health
+	if health <= 0 and state[3]:#If health is 0 and can hit, DIE!
+		state = states.values()[states.size()-1]#Turn to dead state
+		values.cash_money += state[6]#The yield of the crop
+		queue_free()
 
 
 func _on_detection_area_area_entered(area: Area2D) -> void:
@@ -87,15 +87,13 @@ func _on_attack_area_area_exited(area: Area2D) -> void:
 
 
 func _on_maturity_timer_timeout() -> void:
-	if state[0] < states.size():#Checks if current state is less than the total states
+	if state[0] < states.size()-1:#Checks if current state is less than the total states
 		state = states.values()[state[0]+1]
 		health = state[2]
+		$Sprite2D.texture = load(state[1])
 		print("New State!!!")
 
 		matureTimer.start(calcMatureTime())
 func _on_attack_timer_timeout() -> void:
 	if !debounce:
 		debounce = true
-
-func _on_death_timer_timeout() -> void:
-	queue_free()#Nukes self on death, after timeout
