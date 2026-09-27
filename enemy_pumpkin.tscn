@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://upik4ly1rjpm"]
+[gd_scene load_steps=15 format=3 uid="uid://bt2kgy26b62em"]
 
 [ext_resource type="Texture2D" uid="uid://dmnv0pext730l" path="res://Sprites/Enemies/PumpkinEnemyPart7.png" id="1_2o23d"]
 [ext_resource type="Texture2D" uid="uid://cbuu1ecx3s0j6" path="res://Sprites/Enemies/PumpkinEnemyPart6.png" id="2_cvf23"]
@@ -36,8 +36,8 @@ enabled = true
 modification_count = 1
 modifications/0 = SubResource("SkeletonModification2DCCDIK_oegb8")
 
-[sub_resource type="Animation" id="Animation_r33op"]
-resource_name = "idle"
+[sub_resource type="Animation" id="Animation_pujwg"]
+resource_name = "Attack"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -46,22 +46,22 @@ tracks/0/path = NodePath("IKtargets/HeadTarget:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.266667, 0.533333, 0.766667, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.533333, 0.566667, 0.866667, 1),
+"transitions": PackedFloat32Array(1, 2.92817, 0.466516, 0.307786, 1, 1, 1),
 "update": 0,
-"values": [Vector2(11, -20), Vector2(12, -21), Vector2(13, -20), Vector2(12, -19), Vector2(11, -20)]
+"values": [Vector2(13, -20), Vector2(6, -19), Vector2(14, -23), Vector2(27, -21), Vector2(28, -18), Vector2(17, -12), Vector2(13, -20)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterContainer/Bone/Skeleton2D/Main/Stem1/Leaf:rotation")
+tracks/1/path = NodePath("CharacterContainer/Bone/Skeleton2D/Main/Stem1/Stem2/Head:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.666667, 0.866667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [-0.130284, 0.183578, -0.130284]
+"values": [-0.243203, 0.181869, -0.475099, -0.709538, -0.10745]
 }
 
 [sub_resource type="Animation" id="Animation_am7lp"]
@@ -215,8 +215,8 @@ tracks/4/keys = {
 "values": [Vector2(13, -20), Vector2(10, -25), Vector2(9, -26), Vector2(12, -20)]
 }
 
-[sub_resource type="Animation" id="Animation_pujwg"]
-resource_name = "Attack"
+[sub_resource type="Animation" id="Animation_r33op"]
+resource_name = "idle"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -225,22 +225,22 @@ tracks/0/path = NodePath("IKtargets/HeadTarget:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.5, 0.533333, 0.566667, 0.866667, 1),
-"transitions": PackedFloat32Array(1, 2.92817, 0.466516, 0.307786, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.266667, 0.533333, 0.766667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(13, -20), Vector2(6, -19), Vector2(14, -23), Vector2(27, -21), Vector2(28, -18), Vector2(17, -12), Vector2(13, -20)]
+"values": [Vector2(11, -20), Vector2(12, -21), Vector2(13, -20), Vector2(12, -19), Vector2(11, -20)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterContainer/Bone/Skeleton2D/Main/Stem1/Stem2/Head:rotation")
+tracks/1/path = NodePath("CharacterContainer/Bone/Skeleton2D/Main/Stem1/Leaf:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.5, 0.666667, 0.866667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-0.243203, 0.181869, -0.475099, -0.709538, -0.10745]
+"values": [-0.130284, 0.183578, -0.130284]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rd14r"]
@@ -258,51 +258,51 @@ _data = {
 [node name="Body" type="Node2D" parent="CharacterContainer"]
 
 [node name="Root2" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(1, -6.01356)
-rotation = -0.20729
+position = Vector2(1, -6)
+rotation = -0.209654
 scale = Vector2(0.999946, 0.999946)
 texture = ExtResource("1_2o23d")
 offset = Vector2(6, 5)
 
 [node name="Root3" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(1, -6.01356)
-rotation = 0.413828
+position = Vector2(1, -6)
+rotation = 0.41613
 scale = Vector2(0.999926, 0.999926)
 texture = ExtResource("2_cvf23")
 offset = Vector2(-4, 5)
 
 [node name="Root1" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(1, -6.01356)
-rotation = -0.518073
+position = Vector2(1, -6)
+rotation = -0.519786
 scale = Vector2(0.99995, 0.99995)
 texture = ExtResource("3_7ysh3")
 offset = Vector2(1, 5)
 
 [node name="Stem1" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(1, -6.01356)
-rotation = -0.00980279
-scale = Vector2(0.999874, 0.999874)
+position = Vector2(1, -6)
+rotation = 0.0579517
+scale = Vector2(0.999987, 0.999987)
 texture = ExtResource("4_6vy12")
 offset = Vector2(-1, -7)
 
 [node name="Stem2" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(2.05654, -20.0127)
-rotation = 0.0414718
-scale = Vector2(0.99991, 0.99991)
+position = Vector2(3.00142, -19.8925)
+rotation = -0.182071
+scale = Vector2(0.999989, 0.999989)
 texture = ExtResource("5_v7gqp")
 offset = Vector2(4, -1)
 
 [node name="Head" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(11, -20)
-rotation = 0.10729
-scale = Vector2(0.99989, 0.99989)
+position = Vector2(11.7259, -21.8629)
+rotation = -0.338309
+scale = Vector2(0.999957, 0.999957)
 texture = ExtResource("6_hg52a")
 offset = Vector2(2, 5)
 
 [node name="Leaf" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(-2.67635, -13.1877)
-rotation = 0.000698576
-scale = Vector2(0.999838, 0.999838)
+position = Vector2(-2.18256, -13.4074)
+rotation = 0.068453
+scale = Vector2(0.999952, 0.999952)
 texture = ExtResource("7_x7q8d")
 offset = Vector2(-3, 4)
 
@@ -375,7 +375,7 @@ remote_path = NodePath("../../../../../../Body/Stem2")
 [node name="Head" type="Bone2D" parent="CharacterContainer/Bone/Skeleton2D/Main/Stem1/Stem2"]
 position = Vector2(8.16663, -3.64776)
 rotation = -0.243203
-scale = Vector2(0.99998, 0.99998)
+scale = Vector2(0.999968, 0.999968)
 rest = Transform2D(0.970571, -0.240813, 0.240813, 0.970571, 8.16663, -3.64776)
 auto_calculate_length_and_angle = false
 length = 15.915
