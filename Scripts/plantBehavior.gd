@@ -19,7 +19,7 @@ var target #Should be player!
 var moveSpeed = 15
 var attackSpeed = 3
 var damage = 1#Arbitrary lol
-var defaultGrowth = 1
+var defaultGrowth = 20
 
 var states = {#Index, SpriteAnim, Health, canHit, Lower mature time, <higher, yield
 	"Seed" = [0,"res://Sprites/Growing_Corn/seed.png",1,false,defaultGrowth,defaultGrowth,0],
@@ -62,8 +62,8 @@ func _process(delta: float) -> void:
 	
 	#Check Health
 	if health <= 0 and state[3]:#If health is 0 and can hit, DIE!
-		state = states.values()[states.size()-1]#Turn to dead state
 		values.cash_money += state[6]#The yield of the crop
+		print(values.cash_money)
 		queue_free()
 
 
