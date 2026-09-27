@@ -1,5 +1,7 @@
 extends Node
 
+@onready var health_bar = $HealthBar
+
 var player_health = 6
 var cash_money = 0
 
@@ -11,4 +13,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	health_bar.frame = player_health

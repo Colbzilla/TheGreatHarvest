@@ -1,9 +1,67 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4babi1uysjld"]
+[gd_scene load_steps=14 format=3 uid="uid://c4babi1uysjld"]
 
 [ext_resource type="PackedScene" uid="uid://db7ighi66go7w" path="res://Scenes/scythe.tscn" id="1_5qsmp"]
 [ext_resource type="PackedScene" uid="uid://dmejsito8m6q1" path="res://Scenes/player_character.tscn" id="1_hqvn1"]
 [ext_resource type="Script" path="res://Scenes/game.gd" id="1_ip1tg"]
 [ext_resource type="Texture2D" uid="uid://b3mu581fmalt3" path="res://Sprites/Terrain.webp" id="2_huoew"]
+[ext_resource type="Texture2D" uid="uid://bd2my4h2lg8j6" path="res://Sprites/UI/HealthbarFull-sheet.png" id="5_7x248"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpdj0"]
+atlas = ExtResource("5_7x248")
+region = Rect2(300, 0, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t680v"]
+atlas = ExtResource("5_7x248")
+region = Rect2(250, 0, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3q8a"]
+atlas = ExtResource("5_7x248")
+region = Rect2(200, 0, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if51s"]
+atlas = ExtResource("5_7x248")
+region = Rect2(150, 0, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8gjs"]
+atlas = ExtResource("5_7x248")
+region = Rect2(100, 0, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnjui"]
+atlas = ExtResource("5_7x248")
+region = Rect2(50, 0, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twmc8"]
+atlas = ExtResource("5_7x248")
+region = Rect2(0, 0, 50, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhtwt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpdj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t680v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3q8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if51s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8gjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnjui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twmc8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Map" type="Node"]
 script = ExtResource("1_ip1tg")
@@ -21,3 +79,9 @@ position = Vector2(121, 102)
 z_index = -1
 position = Vector2(120, 108)
 texture = ExtResource("2_huoew")
+
+[node name="HealthBar" type="AnimatedSprite2D" parent="."]
+position = Vector2(26, 7)
+sprite_frames = SubResource("SpriteFrames_mhtwt")
+frame = 4
+frame_progress = 0.891043
