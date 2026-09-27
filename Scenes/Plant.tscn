@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://buffj2bau0tnp"]
+[gd_scene load_steps=0 format=3 uid="uid://buffj2bau0tnp"]
 
-[ext_resource type="Script" uid="uid://23rv10l0egop" path="res://plantBehavior.gd" id="1_w7rnh"]
+[ext_resource type="Script" path="res://Scripts/plantBehavior.gd" id="1_w7rnh"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j05hm"]
 size = Vector2(50, 50)
