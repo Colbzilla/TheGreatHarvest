@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://bt2kgy26b62em"]
 
-[ext_resource type="Texture2D" uid="uid://dmnv0pext730l" path="res://Sprites/Enemies/PumpkinEnemyPart7.png" id="1_2o23d"]
-[ext_resource type="Texture2D" uid="uid://cbuu1ecx3s0j6" path="res://Sprites/Enemies/PumpkinEnemyPart6.png" id="2_cvf23"]
-[ext_resource type="Texture2D" uid="uid://deiqia3jks0jl" path="res://Sprites/Enemies/PumpkinEnemyPart5.png" id="3_7ysh3"]
-[ext_resource type="Texture2D" uid="uid://mwks5ni24ore" path="res://Sprites/Enemies/PumpkinEnemyPart3.png" id="4_6vy12"]
-[ext_resource type="Texture2D" uid="uid://c1or5of4farqb" path="res://Sprites/Enemies/PumpkinEnemyPart2.png" id="5_v7gqp"]
-[ext_resource type="Texture2D" uid="uid://dccg75wqflk1" path="res://Sprites/Enemies/PumpkinEnemyPart1.png" id="6_hg52a"]
-[ext_resource type="Texture2D" uid="uid://7qkyeu0yhl6y" path="res://Sprites/Enemies/PumpkinEnemyPart4.png" id="7_x7q8d"]
+[ext_resource type="Texture2D" uid="uid://dmnv0pext730l" path="res://Sprites/Enemies/PumpkinEnemyPart7.png" id="1_04qqi"]
+[ext_resource type="Texture2D" uid="uid://cbuu1ecx3s0j6" path="res://Sprites/Enemies/PumpkinEnemyPart6.png" id="2_vkgbv"]
+[ext_resource type="Texture2D" uid="uid://deiqia3jks0jl" path="res://Sprites/Enemies/PumpkinEnemyPart5.png" id="3_qgp5s"]
+[ext_resource type="Texture2D" uid="uid://mwks5ni24ore" path="res://Sprites/Enemies/PumpkinEnemyPart3.png" id="4_3nsog"]
+[ext_resource type="Texture2D" uid="uid://c1or5of4farqb" path="res://Sprites/Enemies/PumpkinEnemyPart2.png" id="5_hesto"]
+[ext_resource type="Texture2D" uid="uid://dccg75wqflk1" path="res://Sprites/Enemies/PumpkinEnemyPart1.png" id="6_kq6c3"]
+[ext_resource type="Texture2D" uid="uid://7qkyeu0yhl6y" path="res://Sprites/Enemies/PumpkinEnemyPart4.png" id="7_xumy3"]
 
 [sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_oegb8"]
 target_nodepath = NodePath("../../../IKtargets/HeadTarget")
@@ -261,49 +261,48 @@ _data = {
 position = Vector2(1, -6)
 rotation = -0.209654
 scale = Vector2(0.999946, 0.999946)
-texture = ExtResource("1_2o23d")
+texture = ExtResource("1_04qqi")
 offset = Vector2(6, 5)
 
 [node name="Root3" type="Sprite2D" parent="CharacterContainer/Body"]
 position = Vector2(1, -6)
 rotation = 0.41613
 scale = Vector2(0.999926, 0.999926)
-texture = ExtResource("2_cvf23")
+texture = ExtResource("2_vkgbv")
 offset = Vector2(-4, 5)
 
 [node name="Root1" type="Sprite2D" parent="CharacterContainer/Body"]
 position = Vector2(1, -6)
 rotation = -0.519786
 scale = Vector2(0.99995, 0.99995)
-texture = ExtResource("3_7ysh3")
+texture = ExtResource("3_qgp5s")
 offset = Vector2(1, 5)
 
 [node name="Stem1" type="Sprite2D" parent="CharacterContainer/Body"]
 position = Vector2(1, -6)
-rotation = 0.0579517
-scale = Vector2(0.999987, 0.999987)
-texture = ExtResource("4_6vy12")
+rotation = 0.134713
+texture = ExtResource("4_3nsog")
 offset = Vector2(-1, -7)
 
 [node name="Stem2" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(3.00142, -19.8925)
-rotation = -0.182071
-scale = Vector2(0.999989, 0.999989)
-texture = ExtResource("5_v7gqp")
+position = Vector2(4.06084, -19.6979)
+rotation = 0.0062689
+scale = Vector2(0.999999, 0.999999)
+texture = ExtResource("5_hesto")
 offset = Vector2(4, -1)
 
 [node name="Head" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(11.7259, -21.8629)
-rotation = -0.338309
-scale = Vector2(0.999957, 0.999957)
-texture = ExtResource("6_hg52a")
+position = Vector2(13, -20)
+rotation = 0.0110169
+scale = Vector2(0.999967, 0.999967)
+texture = ExtResource("6_kq6c3")
 offset = Vector2(2, 5)
 
 [node name="Leaf" type="Sprite2D" parent="CharacterContainer/Body"]
-position = Vector2(-2.18256, -13.4074)
-rotation = 0.068453
-scale = Vector2(0.999952, 0.999952)
-texture = ExtResource("7_x7q8d")
+position = Vector2(-1.60518, -13.6297)
+rotation = 0.145215
+scale = Vector2(0.999964, 0.999964)
+texture = ExtResource("7_xumy3")
 offset = Vector2(-3, 4)
 
 [node name="Bone" type="Node2D" parent="CharacterContainer"]

@@ -13,6 +13,7 @@ var debounce = true
 var deathTimeout = 3
 var rng = RandomNumberGenerator.new()
 var target #Should be player!
+
 var moveSpeed = 15
 var attackSpeed = 1
 var damage = 10#Arbitrary lol
@@ -34,6 +35,7 @@ func isAttacked(damage):
 	if health <= 0:
 		state = states.values()[states.size()-1]#Turn to dead state
 		deathTimer.start()
+
 func attack(damage):#non-functional as of rn, placeholder values
 	debounce = false
 	#Make target recieve damage
