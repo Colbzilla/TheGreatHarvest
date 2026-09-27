@@ -15,9 +15,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="The Great Harvest"
-run/main_scene="res://Scenes/enemy_pumpkin_visual.tscn"
+run/main_scene="res://Scenes/map.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+run/canvas_textures/default_texture_filter=0
 
 [display]
 
