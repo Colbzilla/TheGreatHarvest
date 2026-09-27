@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4babi1uysjld"]
+[gd_scene load_steps=5 format=3 uid="uid://c4babi1uysjld"]
 
 [ext_resource type="PackedScene" uid="uid://db7ighi66go7w" path="res://Scenes/scythe.tscn" id="1_5qsmp"]
 [ext_resource type="PackedScene" uid="uid://dmejsito8m6q1" path="res://Scenes/player_character.tscn" id="1_hqvn1"]
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_ip1tg"]
 [ext_resource type="Texture2D" uid="uid://b3mu581fmalt3" path="res://Sprites/Terrain.webp" id="2_huoew"]
 
 [node name="Map" type="Node"]
+script = ExtResource("1_ip1tg")
 
 [node name="Scythe" parent="." instance=ExtResource("1_5qsmp")]
 z_index = 2
