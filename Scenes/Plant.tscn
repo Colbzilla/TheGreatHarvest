@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cbu48c1aonuv5"]
+
+[ext_resource type="Script" uid="uid://4ug2p52wghvc" path="res://Scripts/plantBehavior.gd" id="1_t27ga"]
+[ext_resource type="Texture2D" uid="uid://biqfcs1siglu0" path="res://Sprites/Growing_Corn/seed.png" id="2_mb61i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j05hm"]
+size = Vector2(50, 50)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gdi4q"]
+radius = 150.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7rnh"]
+size = Vector2(32, 32)
+
+[node name="Node2D" type="Node2D" unique_id=627146023]
+script = ExtResource("1_t27ga")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=1010718609]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1817512468]
+shape = SubResource("RectangleShape2D_j05hm")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=789180493]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1967365075]
+shape = SubResource("CircleShape2D_gdi4q")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1211702277]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1300425061]
+shape = SubResource("RectangleShape2D_w7rnh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1787943584]
+texture = ExtResource("2_mb61i")
+
+[node name="MaturityTimer" type="Timer" parent="." unique_id=533647055]
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=1855626079]
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="area_entered" from="DetectionArea" to="." method="_on_detection_area_area_entered"]
+[connection signal="area_exited" from="DetectionArea" to="." method="_on_detection_area_area_exited"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_detection_area_area_entered"]
+[connection signal="area_exited" from="Hitbox" to="." method="_on_detection_area_area_exited"]
+[connection signal="timeout" from="MaturityTimer" to="." method="_on_maturity_timer_timeout"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
