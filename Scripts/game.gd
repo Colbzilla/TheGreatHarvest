@@ -3,7 +3,7 @@ extends Node
 @onready var health_bar = $HealthBar
 
 @export var player_health = 6
-@export var cash_money = 10#Start at 10 so they can buy seeds
+@export var cash_money = 10 #Start at 10 so they can buy seeds
 
 @export var collected_corn = 0
 @export var collected_pumpkin = 0
@@ -24,3 +24,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	health_bar.frame = player_health
+	
+	if Input.is_action_just_pressed("drop seed"):
+		if corn_seeds > 0:
+			corn_seeds -= 1
+		elif pumpkin_seeds > 0:
+			pumpkin_seeds -= 1
