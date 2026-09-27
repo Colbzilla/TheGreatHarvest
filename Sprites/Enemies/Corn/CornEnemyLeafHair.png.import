@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qkyeu0yhl6y"
-path="res://.godot/imported/PumpkinEnemyPart4.png-6a870e89be19163d56602a01f8cdb13d.ctex"
+uid="uid://bsxlmonjw03pk"
+path="res://.godot/imported/CornEnemyLeafHair.png-15f20130b266813736b742d4d5811d6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/PumpkinEnemyPart4.png"
-dest_files=["res://.godot/imported/PumpkinEnemyPart4.png-6a870e89be19163d56602a01f8cdb13d.ctex"]
+source_file="res://Sprites/Enemies/Corn/CornEnemyLeafHair.png"
+dest_files=["res://.godot/imported/CornEnemyLeafHair.png-15f20130b266813736b742d4d5811d6e.ctex"]
 
 [params]
 
